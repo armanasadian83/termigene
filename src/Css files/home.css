@@ -1,0 +1,306 @@
+@font-face{font-family: fugen-font; src: url("./../../public/Fonts/B_Yekan/Yekan.ttf");}
+*{font-family: fugen-font;}
+
+/* viewport: Desktop (main classes) 
+
+/* to hide mobile nav on Desktop */
+.mobile-nav-open{display: none;}
+.mobile-nav-closed{position: absolute; opacity: 0;}
+/* to hide mobile nav on Desktop */
+
+/* Desktop navbar*/
+.navbar {position: relative; height: 70vh; /* Adjust height as needed */
+    background-image: url('./../Images/banner-background-image.jpg'); background-size: cover; background-position: center; 
+    display: block;}
+
+.sidenavbar-open-bg-blur{filter: none;}
+.navbar-menu {position: absolute; top: 20px; width: 100%; list-style: none; margin: 0; padding: 0; display: flex; align-items: center;
+    justify-content: center;}
+
+.nav-main-logo{position: absolute; top: 20px; right: 20px; list-style: none; z-index: 2000;}
+.nav-main-logo a{text-decoration: none; color: #fff;}
+.navbar-options{width: 85%; display: flex; justify-content: center; font-size: 18px; color: black;}
+.navbar-options li a{font-size: 20px !important;}
+.navbar-menu li {margin: 0 10px;}
+.navbar-menu li a {color: rgb(255, 255, 255); text-shadow: 1px 1px black; padding: 6px 20px; text-decoration: none;
+    font-size: 18px; font-weight: bold; border-radius: 18px; transition: 0.5s;}
+
+.navbar-menu li a:hover{color: black; background-color:rgba(255, 255, 255, 0.20); text-shadow: none;}
+.navbar-btn{margin-top: -5px; margin-right: 10px; background-color: black; color: white; transition: 250ms; 
+    border-radius: 18px; font-size: 18px;}
+
+.navbar-btn:hover{color: black; background-color: white; transform: scale(1.1);}
+/* Desktop navbar*/
+
+/*Banner*/
+.hello{padding-top: 150px; padding-right: 320px; color: #fff !important;}
+.hello-mobile{display: none;}
+.hello h1{font-size: 124px; color: rgb(255, 255, 255); text-shadow: 3px 3px 3px rgb(3, 1, 26);}
+.navbar-toggle-btn{display: none;}
+
+@keyframes anim {0%{margin-top: 10px;} 10%{margin-top: 2px;} 30%{margin-top: 2px;} 40%{margin-top: -63px;} 75%{margin-top: -63px;} 
+    85%{margin-top: -128px;} 97%{margin-top: -128px;} 100%{margin-top: -138px;}}
+
+.text-slider{height: 65px; overflow: hidden; font-size: 30px;}
+.banner-quest{color: rgb(227, 232, 217); margin-right: 105px; text-shadow: 1px 1px black;}
+.banner-quest:first-child{animation: anim 10s infinite;}
+.banner-btn{border: none;}
+.banner-btn a{background-color: rgb(37, 37, 37); color: white; border-radius: 22px; font-size: 27px; padding: 3px 15px; transition: 200ms;}
+.banner-quest button a{text-decoration: none; color: #fff;}
+.banner-btn a:hover{background-color: #fff; color: black;}
+.banner-btn a:active{background-color: transparent; border: 1px solid #000;}
+/*Banner*/
+
+/* viewport: Desktop (main classes)
+-----------------------------------------------------------------------------------------------------------------------------------
+/* viewport: Tablet */
+
+@media screen and (max-width : 1200px){
+
+    /*navbar on Tablet screen*/
+    .navbar-menu li {margin: 0 5px;}
+    .navbar-menu li a {color: rgb(255, 255, 255); text-shadow: 1px 1px black; padding: 6px 12px; text-decoration: none;
+        font-size: 17px; font-weight: bold; border-radius: 18px; transition: 0.5s;}
+    
+    .navbar-menu li a:hover{color: black; background-color: rgba(255, 255, 255, 0.20); text-shadow: none;}
+    .navbar-options li a{font-size: 17px !important;}
+    .navbar-btn{margin-top: -5px; margin-right: 10px; font-size: 14px; background-color: black; color: white; 
+        transition: 250ms; font-size: 16px;}
+    
+    .navbar-btn:hover{color: black; background-color: white; transform: scale(1.08);} 
+    .hello{padding-right: 135px !important;}
+    .hello-mobile{display: none;}   
+    .hello h1{font-size: 110px; color: rgb(255, 255, 255); text-shadow: 3px 3px 3px rgb(3, 1, 26);}
+    .text-slider{height: 50px; font-size: 23px; text-wrap: nowrap;}
+    .banner-btn a{background-color: rgb(37, 37, 37); color: white; border-radius: 18px; font-size: 23px;}
+
+    @keyframes anim-tablet {0%{margin-top: 10px;} 10%{margin-top: 1px;} 30%{margin-top: 1px;} 40%{margin-top: -55px;} 75%{margin-top: -55px;}
+        85%{margin-top: -115px;} 97%{margin-top: -115px;} 100%{margin-top: -130px;}}
+
+    .banner-quest:first-child{animation: anim-tablet 10s infinite;}
+    /*navbar on Tablet screen*/
+}
+
+/* viewport: tablet 
+================================================================================================================================
+/* viewport: mobile */
+
+
+@media screen and (max-width : 790px) {
+
+    .navbar-menu{display: none;}
+
+    /* navbar logo for mobile */
+    .navbar-logo{cursor: pointer; text-shadow: 5px 5px 6px rgb(0, 0, 0); margin-right: 25px; margin-left: 30px; font-size: 26px;
+        color: white;}
+    
+    .navbar-logo span{text-shadow: 5px -1px 4px rgb(0, 0, 0); position: absolute; top: -16px; right: 76px; font-size: 42px;}
+    .logo-font{font-family:cursive;}
+    /* navbar logo for mobile */
+
+    /* Side navbar for mobile */
+    .sidenavbar-open-bg-blur{filter:blur(4px);}
+    .mobile-nav-closed{/*position: fixed;*/ background-image: url('./../Images/banner-background-image.jpg'); background-size: cover;
+        background-position: center; z-index: 0; opacity: 0; height: 100vh; width: 0; transition: all 1s;}
+
+    .mobile-nav-open{display: block; position: fixed; background-image: url('./../Images/banner-background-image.jpg');
+        background-size: cover; background-position: 10%; opacity: 1; z-index: 20; height: 100vh; width: 50%;background-color: white;
+        transition: all 1s;}
+
+    .navbar-menu2 {position: relative; z-index: 1; list-style: none; margin: 0; padding: 0;} 
+    .navbar-menu2 li {margin: 60px 15px; margin-top: 30px;} 
+    .navbar-menu2 li a {color: rgb(255, 255, 255); text-shadow: 1px 1px black; padding: 8px 20px; text-decoration: none;
+        font-size: 18px; font-weight: bold; border-radius: 20px; transition: 0.5s;}
+    
+    .navbar-menu2 li a:hover {color: black; background-color: rgba(255, 255, 255, 0.20); text-shadow: none;}
+    .mobile-nav-closebtn{position: absolute; top: -35px; left: 20px; font-size: 26px; cursor: pointer; color: white;}
+    .mobile-nav-closebtn:hover{font-size: 30px; opacity: 55%;}
+    .navbar-btn{margin-top: -20px; margin-right: 10px; background-color: black; color: white; transition: 250ms;}
+    .navbar-btn:hover{color: black; background-color: white; transform: scale(1.1);}
+    /* Side navbar for mobile */
+
+    /* background image overlay setting on mobile viewport*/
+    .navbar {background-position: 90%;}
+    /* background image overlay setting on mobile viewport*/
+
+    /* navbar on Mobile viewport*/
+    .navbar-options{display: none;}
+
+    /* navbar toggle btn */
+    .navbar-toggle-btn{display: block; font-size: 32px; position: absolute; left: 25px; top: 20px; cursor: pointer;}
+    .hamburger-icon {display: flex; flex-direction: column; justify-content: space-between; width: 30px; height: 20px; cursor: pointer;}   
+    .bar {width: 100%; height: 5.5px; background-color: rgb(243, 243, 243); transition: all 600ms ease;}
+    /* navbar toggle btn */
+
+    .hamburger-icon:hover .bar {background-color: rgb(218, 218, 218); height: 6px;}
+    /* navbar on Mobile viewport*/
+
+    /*banner on Mobile viewport*/
+    .hello{padding-right: 135px !important;}
+    .hello h1{font-size: 100px; color: rgb(255, 255, 255); text-shadow: 3px 3px 3px rgb(3, 1, 26);}
+    .text-slider{height: 40px; margin-right: -40px; font-size: 18px;}
+    .banner-btn a{background-color: rgb(37, 37, 37); color: white; border-radius: 18px; font-size: 16px;}
+
+    @keyframes anim-mobile {0%{margin-top: 30px;} 10%{margin-top: 0px;} 30%{margin-top: 0px;} 40%{margin-top: -45px;} 75%{margin-top: -45px;}
+        85%{margin-top: -95px;} 97%{margin-top: -95px;} 100%{margin-top: -110px;} }
+
+    .banner-quest:first-child{animation: anim-mobile 10s infinite;}
+    /*banner on Mobile viewport*/
+}
+/* viewport: mobile
+=-=-=--=-=-==-==-=-=-=-==-==-=-=-=-=-==-==-=-=-=-=-=-=-=-=-=-=-=-=-===-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+/* viewport: mobile small contents (banner text slider, ) */
+@media screen and (max-width : 550px){
+    .navbar{height: 80vh;}
+    @keyframes anim { 0%{margin-top:15px;} 10%{margin-top: -6px;} 30%{margin-top: -6px;} 40%{margin-top: -86px;} 75%{margin-top: -86px;}
+        85%{margin-top: -166px;} 97%{margin-top: -166px;} 100%{margin-top: -180px;}}
+
+    .text-slider{height: 80px; overflow: hidden;}  
+    .banner-quest{margin-right: 20px !important; color: rgb(227, 232, 217); margin-top: 10px;
+        text-shadow: 1px 1px black; font-size: 20px;}
+    
+    .banner-quest:first-child{animation: anim 10s infinite;}
+    .special-small-content-second{font-size: 17px;}
+    .hello{display: none}
+    .hello-mobile{display: block !important; padding-top: 170px !important; padding-right: 50px !important;} 
+    .hello-mobile h1{font-size: 110px; color: rgb(255, 255, 255); text-shadow: 3px 3px 3px rgb(3, 1, 26);}
+    .text-slider{margin-right: -20px; font-size: 18px; text-wrap: wrap !important;}
+    .banner-btn a{background-color: rgb(37, 37, 37); color: white; margin-top: 10px; border-radius: 15px; font-size: 19px;
+        padding: 6px;}
+}
+
+/* home quest section starts from here */
+
+.quest-section .desktop-display .row img{width: 80%; border-radius: 15px; border: 2px solid rgb(81, 5, 139);}
+.quest-section .desktop-display h4{font-size: 38px; font-weight: 600; text-shadow: 1px 1px 0.5px rgb(114, 7, 195);}
+.quest-section .desktop-display p{font-size: 23px; margin-top: 15px;}
+.quest-section .desktop-display button{margin-top: -15px !important; padding: 3px 20px;}
+
+.quest-section .desktop-quest-contentWrapper{padding: 10px 30px;}
+
+.quest-section .mobile-display{display: none;}
+
+@media screen and (max-width : 992px){
+    .quest-section .desktop-display{display: none;}
+    .quest-section .mobile-display{display: block;}
+
+    .quest-section .mobile-display img{width: 100%; border-radius: 15px; border: 2px solid rgb(81, 5, 139);}
+    .quest-section .mobile-display h4{font-size: 30px; font-weight: 600; text-shadow: 1px 1px 0.5px rgb(114, 7, 195);}
+    .quest-section .mobile-display p{font-size: 18px; font-weight: 400;}
+}
+
+
+
+/* home form section starts here */
+
+.form-section{background-color: #000 !important; color: #fff; border-top-right-radius: 7%;
+    border-top-left-radius: 7%;}
+
+.form-inputs-section label, .form-inputs-section  label{font-size: 17px; margin-right: 20px; font-weight: 500;}
+.form-inputs-section  label{margin-bottom: 5px !important;}
+.form-inputs-section input{width: 100%; outline: none; border-radius: 18px; height: 45px;
+    font-size: 18px; padding-right: 8px; background-color: #000; color: #fff; border: 2px solid #fff;}
+
+.form-inputs-section option{font-size: 16px;}
+.form-inputs-section option:hover{background-color: none !important;}
+
+.form-inputs-section .col-12 textarea{border-radius: 18px; padding: 8px; overflow: hidden; width: 100%;
+    font-size: 16px; background-color: #000; color: #fff; border: 2px solid #fff; outline: none;}
+
+.btnWrapper button{color: #fff; background-color: #000; width: 400px; height: 80px; border-radius: 27px;
+    font-size: 25px; box-shadow: 1px 3px rgb(47, 47, 47); font-weight: 500; border: 2px solid #fff;}
+
+.btnWrapper button:hover{color: #000; background-color: #fff; box-shadow: 2px 3px rgb(114, 7, 195); transform: scale(1.05);
+    transition: 300ms; font-size: 27px; border: 2px solid rgb(114, 7, 195);}
+
+.form-inputs-section .input-required-star{font-size: 24px; color: rgb(183, 117, 233);}
+.form-inputs-section .input-validation-text span{font-size: 15px; font-weight: 50; margin-right: 5px; color: rgb(172, 92, 233);}
+
+.form-section .submitted-section{height: 400px;}
+.form-section .submitted-section .col-12{margin-top: 120px !important;}
+.form-section .submitted-section h1{font-size: 60px; font-weight: 650; text-shadow: 2px 2px rgb(114, 7, 195);}
+.form-section .submitted-section h4{font-size: 26px; margin-top: 30px; color: rgb(171, 171, 171);}
+.form-section .submitted-section button{font-size: 23px; margin-top: 30px; border: 2px solid rgb(114, 7, 195);
+    background-color: #000; color: #fff; padding: 8px 50px; border-radius: 20px; transition: 100ms;}
+
+.form-section .submitted-section button:hover{transform: scale(1.05); background-color: #fff; color: #000;
+    box-shadow: 1px 2px rgb(114, 7, 195);}
+
+.form-section .submitted-section button:active{background-color: #000; color: #fff; border: 2px solid rgb(114, 7, 195);
+    transition: 200ms;}
+
+@media screen and (max-width : 766.40px){
+    .form-section{border-top-right-radius: 45px; border-top-left-radius: 45px;}
+    .form-inputs-section{padding: 0px 30px;}
+    .form-inputs-section .special-margin{margin-top: 35px;}
+    .form-inputs-section input, .form-inputs-section select{width: 100%; width: 100% !important;}
+    .btnWrapper button{color: #fff; background-color: #000; width: 350px; height: 70px; border-radius: 27px;
+        font-size: 23px; box-shadow: 1px 3px rgb(47, 47, 47); font-weight: 500; border: 2px solid #fff; margin-top: 35px;}
+
+    .form-section .submitted-section{height: 500px;}
+    .form-section .submitted-section h1{font-size: 50px;}
+    .form-section .submitted-section h4{font-size: 22px;}
+}
+
+@media screen and (max-width : 1400px){
+    .form-inputs-section input ,.form-inputs-section select{width: 100%; height: 45px;}
+    .form-section .submitted-section{height: 450px;}
+}
+
+/* footer section starts from here*/
+
+.footer-section{position: relative; background-image: url("./../Images//footer-background.jpg"); height: 43vh;
+    background-size: cover; background-position: center; display: block; border-top-right-radius: 70px !important;
+    border-top-left-radius: 70px !important;}
+
+.footer-section .fugen-branding h4{margin-right: 70px;}
+.footer-section .me-auto{margin-left: 70px;}
+
+.footer-section h4{font-weight: 600;}
+.footer-section li{list-style: none; font-size: 19px;}
+
+.footer-section .footer-rights p{margin-top: 45px; font-family: 'Times New Roman', Times, serif !important; font-weight: 600;}
+
+@media screen and (max-width: 500px) {
+    .footer-section li{margin-right: -15px;}
+    .footer-section{height: 47vh;}
+    .footer-section .btnsBox{padding-top: 10px;}
+}
+
+
+
+/* continue ------------------------------------------------------------------------------*/
+
+.serviceSection img{border-radius: 25px; width: 100%;}
+.serviceSection h4{font-size: 26px; font-weight: 600;}
+.serviceSection p{font-size: 20px; padding-left: 30px; text-align: justify;}
+.serviceSection button{float: left; margin-left: 30px; background: #8208d1; color: #fff;
+    padding-right: 30px; padding-left: 30px; border-radius: 20px; font-size: 18px; font-weight: 600;
+    font-family: fugen-font;}
+
+@media screen and (max-width : 500px) {
+    .serviceSection{flex-direction: column-reverse;}
+    .serviceSection img{margin-bottom: 10px;}
+    .servicePage{padding-right: 15px; padding-left: 15px;}
+    .serviceSection p{font-size: 18px; padding-left: 0px;}
+    .serviceSection button{margin-left: 5px;}
+}
+
+/* dropdoown menu for li خدمات */
+
+.navbar-options {display: flex; gap: 20px; list-style: none;position: relative;}
+.dropdown {position: relative;}
+.dropdown-menu {display: none; position: absolute; top: 150%; right: -250px; background: #d7b2f0; padding: 10px;
+    border: 1px solid #ccc; border-radius: 25px; min-width: 600px; min-height: 100px; z-index: 100;}
+.dropdown-menu p{text-align: right; padding-right: 30px;}
+.dropdown-menu a{text-shadow: none !important; font-weight: 500; color: #000 !important; text-align: right;}
+.dropdown-menu a:hover{background: #d7b2f0 !important; color: #2e2d2d !important; text-shadow: none !important;
+    transition: 0s;}
+.dropdown:hover .dropdown-menu {display: block;}
+.dropdown-menu a {display: block; padding: 8px 12px; text-decoration: none; color: black;}
+.dropdown-menu a:hover {background: #f3f3f3;}
+.dropdown-menu::before {content: ""; position: absolute; top: -10px; right: 275px; width: 0; height: 0;
+    border-left: 15px solid transparent; border-right: 15px solid transparent; border-bottom: 10px solid #d7b2f0;
+    filter: drop-shadow(0 -2px 2px rgba(0,0,0,0.1));}
+
+/* dropdoown menu for li خدمات */
