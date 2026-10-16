@@ -327,3 +327,9 @@ Analysis report: `qa/redesign-analysis-fa.md`. Project continuity rules saved in
 - Latest application validation: 35 tests passed; production build passed and 17 metadata route documents generated. Only documentation and a copy of the verified PDF added after those checks.
 - GitHub origin fetched successfully; publishing with normal push, preserving remote history. Push outcome will be verified against origin/main.
 - This request is for GitHub; hosted Sites deployment is not part of this update. Contact form backend remains unconnected.
+
+### GitHub publication confirmed (2026-10-17)
+- Main update commit: 443c493 (Add Telegram and Bale bot services and updated sales catalogue).
+- Normal push succeeded: origin/main advanced from 53d1bf6 to 443c493, including the previously blocked redesign commits. GitHub write access is now working.
+- Catalogue is tracked at docs/Termigene-Catalogue.pdf. Source and catalogue published to GitHub; hosted Sites version was not changed.
+- Final step: publish this outcome note, then verify local HEAD equals remote main and working tree is clean.
