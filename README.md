@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Termigene / ترمیژن
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Persian RTL studio website for web development, Windows, iOS, Android, SEO and Instagram content.
 
-## Available Scripts
+## Development
 
-In the project directory, you can run:
+Existing dependencies use Yarn 1.22.22 and the tracked yarn.lock.
 
-### `yarn start`
+```powershell
+node node_modules/react-scripts/scripts/start.js
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Build
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```powershell
+$env:CI='true'
+node node_modules/react-scripts/scripts/build.js
+```
 
-### `yarn test`
+Output: `build/`. Static hosting must provide SPA fallback to `index.html` for direct links.
+For the current workspace, `node ../preview.cjs` serves that build at http://127.0.0.1:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tests
 
-### `yarn build`
+```powershell
+$env:CI='true'
+node node_modules/react-scripts/scripts/test.js --watchAll=false --runInBand --cacheDirectory=node_modules/.cache/termigene-jest --no-cache
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Jest mappings in package.json support the project's existing React Router 7 with CRA's older Jest resolver. setupTests.js supplies TextEncoder/TextDecoder in jsdom.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Routes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `/`: introduction, services, about, process, FAQ
+- `/service`: service directory
+- `/service/web`, `/service/windows`, `/service/ios`, `/service/android`, `/service/seo`, `/service/instagram`: full service scopes and deliverables
+- `/contact?service=web` (or any other service id): project request with service selection
 
-### `yarn eject`
+## Request delivery
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Click-to-call contacts: 09197522136 and 09228372654. The form validates input but delivery is not connected. Valid submission reports an accurate delivery error. Draft storage, restore and download controls have been removed; input stays only in React state while this form is mounted. Connect a real receiving channel when the owner supplies it.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Continuation and approval
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Read `PROGRESS.md` and `AGENTS.md` before further work. The owner explicitly approved publishing the reviewed redesign on 2026-10-16. For subsequent redesigns, obtain preview approval before publication. Preserve the existing hosting project identity when publishing.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Portfolio pages and metadata
 
-## Learn More
+The case study is at `/portfolio/ogenetech`, with an index at `/portfolio` and a short teaser on the homepage. Content lives in `src/portfolio.js`, page components in `src/PortfolioPages.jsx`, route SEO metadata in `src/portfolio-metadata.json`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`yarn build` runs the `postbuild` metadata generator automatically. If calling CRA directly with `node node_modules/react-scripts/scripts/build.js`, run `node scripts/build-page-metadata.cjs` immediately afterwards. This writes title/description/share tags and project JSON-LD into the HTML of both portfolio routes; React still renders the body in the browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The outer `preview.cjs` serves directory index files for those routes and SPA fallback for other URLs. Review evidence and limitations: `../qa/ogenetech-analysis-fa.md`. No private admin access or live purchase was performed. Canonical URLs should be finalized only when the deployment hostname is confirmed.
 
-### Code Splitting
+Nutrinext case study: /portfolio/nutrinext, implemented in src/NutrinextPages.jsx. Its screenshot is supplied by the owner; completed website and ongoing platform development are described separately. Route metadata and CreativeWork schema are generated alongside the other pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Business services: /service/marketing, /service/business, /service/crm, /service/training. Content: src/business-content.js. Team experience pages: /portfolio/experience/isiran-training, /portfolio/experience/parsana-consulting, /portfolio/experience/telecom-experience. These are attributed as team professional experience, distinct from studio development projects. Public copy must omit personal name, education and years of experience per owner instructions.
