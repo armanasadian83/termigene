@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { services } from './content';
 import pages from './portfolio-metadata.json';
 
-const defaultDescription = 'ترمیژن؛ طراحی و توسعه وب‌سایت، نرم‌افزار ویندوز، اپلیکیشن iOS و اندروید، سئو و محتوا، مشاوره بازاریابی و فروش، تحلیل کسب‌وکار، CRM و آموزش سازمانی.';
+const defaultDescription = 'ترمیژن؛ طراحی و توسعه وب‌سایت، نرم‌افزار ویندوز، اپلیکیشن iOS و اندروید، ساخت بات تلگرام و بله، سئو و محتوا، مشاوره بازاریابی و فروش، تحلیل کسب‌وکار، CRM و آموزش سازمانی.';
 export default function Seo() {
   const { pathname } = useLocation();
   useEffect(() => {

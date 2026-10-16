@@ -12,6 +12,7 @@ import { NutrinextTeaser, NutrinextCaseStudy } from './NutrinextPages';
 import { AboutPage, ProcessPage, QuestionsPage, HomeAbout, MoreLink } from './InfoPages';
 
 function Icon({ type, size = 24 }) {
+  if (type === 'telegram' || type === 'bale') return <img className="platform-logo" src={`/platforms/${type}.svg`} alt="" aria-hidden="true" style={{ width: type === 'bale' ? size * 1.6 : size, height: size, objectFit: 'contain', flexShrink: 0 }} />;
   const paths = {
     web: <><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01m-1 7-3 2 3 2m6-4 3 2-3 2"/></>,
     windows: <path d="m3 5 8-1v7H3Zm10-1 8-1v8h-8ZM3 13h8v7l-8-1Zm10 0h8v8l-8-1Z"/>,

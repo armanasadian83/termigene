@@ -277,3 +277,53 @@ Analysis report: `qa/redesign-analysis-fa.md`. Project continuity rules saved in
 - No credentials were saved to workspace files. Temporary HTTP/1.1 Git setting was removed. Yarn tools are only in outer qa/release-tools, not tracked app source.
 - Resume: inspect git status/log and this report, verify GitHub write access then normal push main (no force); verify Sites Git transport recovery, request fresh source credential and run site-workflow open then package using existing identity. Build/source inputs are already validated; rerun only after changes or when publication provenance requires it. Keep the owner-private audience.
 - Publication is explicitly authorized for this release; no fresh preview approval is needed merely to resume these blocked steps. Contact form delivery remains unconnected; click-to-call numbers are available.
+
+## Hosted connection incident (2026-10-16)
+- User reported `ERR_CONNECTION_CLOSED` at the hosted Site URL.
+- Current Sites API confirms the existing project is active, not disabled, and still at version 1. The version-1 deployment reports succeeded; this is not confirmation that the user's current connection can load it.
+- Independent Windows HTTP HEAD probe started before browser inspection returned curl 52, Empty reply from server. The restricted-shell DNS failure was not treated as a public DNS outage.
+- Network snapshot: system proxy disabled; no listener found on the previously used Happ port 10809; happd service is running, but no active Happ/TUN adapter appeared in Get-NetAdapter. This suggests checking the actual Happ connection; service presence alone does not establish an active VPN.
+- Browser inspection of the current failed tab was rejected by URL security policy. No alternate browser, raw automation, or content-fetch workaround was attempted after that rejection. Browser visual verification remains unavailable.
+- No application code, network settings, sharing rules, commits or deployments changed during this incident. The approved redesign remains local; GitHub write access and Sites source transport blockers from the release section remain unresolved.
+- Continue after user reconnects Happ or provides another working network: verify reachability using permitted methods, then resume the separately authorized release only with verified source provenance. Preserve owner-private access.
+
+## Sales catalogue PDF (2026-10-16)
+- User deferred fixing GitHub access and requested a clean, professional, modern catalogue for prospects contacted by phone. No GitHub/Sites release retry in this task.
+- Created output/pdf/Termigene-Catalogue.pdf: six Persian pages (brand, digital services, consulting/training, Ogenetech, Nutrinext, cooperation/contact), black/purple identity with unchanged white circular symbol.
+- Content omits personal name, education and tenure; ongoing Nutrinext platforms are identified as in development. Professional experience is attributed to team expertise. No invented measured business results.
+- Both project screenshots link to the public client sites; phone numbers link to tel:+989197522136 and tel:+989228372654. All four PDF link annotations verified, six pages, approximately 1.77 MB.
+- Rendered every page via Poppler and inspected the page contact sheet. Repaired unsupported separator glyphs, rerendered final PDF and inspected changed pages. Text layout checks report no overflow.
+- Rebuild: bundled Python qa/create_catalogue.py. Local Persian shaping dependencies are under tmp/pdfs/lib; renders under tmp/pdfs/. Source script is retained for revisions. No application source, Git commit, push or hosted deployment changed.
+- User also reported hosted ERR_CONNECTION_CLOSED again. Sites API still active/version 1; no live connection recovery claimed. Local preview HTTP 200 verified and local URL handed off; browser opening queued.
+
+## Concise catalogue revision (2026-10-16)
+- User requested less clutter, shorter useful content, no slogans and both phone numbers clearly shown on every page.
+- Replaced delivered PDF with a four-page edition: direct introduction, digital services, business consulting/training, and two project examples. Removed slogans, large decorative cover art, extended process/explanation pages and repeated text.
+- Added a prominent consistent contact band on all four pages with both Persian phone labels and verified tel links. Project screenshots remain linked; no unsupported results or personal education/tenure claims.
+- New authoring script: qa/create_compact_catalogue.py. Final artifact remains output/pdf/Termigene-Catalogue.pdf (~1.75 MB). Earlier edition saved only as tmp/pdfs/catalogue-previous.pdf for reference; use compact script for future edits.
+- All four final pages rendered and visually inspected via tmp/pdfs/compact-review.jpg. No overflow reported; phone links verified on each page. No site source change, Git commit, push or deployment.
+
+## Catalogue row alignment (2026-10-16)
+- User flagged disharmony between purple markers, headings, descriptions and separators. Reduced marker height and aligned its center with the heading; heading/description share the same right edge, and separators now end at that text edge.
+- Separator vertical positions are computed from actual paragraph height and next-row spacing, balancing whitespace for one- and two-line descriptions across pages 1-3.
+- Regenerated final four-page PDF, rendered all four pages and inspected aligned-review.jpg. No overflow; both phone links remain verified on each page. Rebuild with qa/create_compact_catalogue.py. No website or publishing changes.
+
+## Catalogue cover, contents and remaining experience (2026-10-16)
+- Owner clarified brand remains Termigene, using the light Fugen reference style. Added a simple cover with the original circular mark, a direct catalogue title and one short slogan; internal copy stays concise.
+- Expanded to six pages: cover, clickable contents, digital services, consulting/training, Ogenetech and Nutrinext, and team professional experience (Isiran, Pars-Ana, telecom). Experience remains correctly attributed to the team, without personal name, education, tenure or invented results.
+- Both clickable phone numbers remain on all six pages. Verified six pages, twelve telephone links and four internal contents destinations. Project screenshots retain external links.
+- Rendered all six pages with Poppler and visually inspected expanded-review.jpg; no overflow or clipping. Rebuild using bundled Python qa/create_compact_catalogue.py; final output/pdf/Termigene-Catalogue.pdf. No website, Git or deployment changes.
+
+## Telegram and Bale bot services (2026-10-17)
+- Added two full services (/service/telegram, /service/bale) with four scope steps, delivery details, 24/7 support, automatically included in cards, navigation, related links and contact selection. Metadata generated for both routes (17 total).
+- Added platform SVG logos: Bale official download and Telegram Simple Icons after official Telegram download was unreachable. Sources in source/public/platforms/SOURCES.md. Logos identify supported platforms without partnership claims.
+- Updated six-page PDF digital-services page and contents with bot development, vector logos and concise scope. Both phone links remain on every page. All six pages rendered; bots-review.jpg and full changed page visually checked without overflow. Rebuild qa/create_compact_catalogue.py; svglib added under tmp/pdfs/lib.
+- Production build passed (main.a447731a.js); 35 tests passed with --cacheDirectory=../tmp/jest-bots after sandbox temp-cache EPERM on first attempt. Browser visual QA not performed; preview requested for user review.
+- No commit, push or hosted deployment. Existing GitHub access and Sites transport blockers remain unverified; user preview approval required for new changes.
+
+## GitHub main update authorized (2026-10-17)
+- Owner explicitly approved publishing the current update as the new main version after obtaining write access.
+- Added Telegram/Bale service routes, logos, metadata and the reviewed six-page catalogue at docs/Termigene-Catalogue.pdf; README updated.
+- Latest application validation: 35 tests passed; production build passed and 17 metadata route documents generated. Only documentation and a copy of the verified PDF added after those checks.
+- GitHub origin fetched successfully; publishing with normal push, preserving remote history. Push outcome will be verified against origin/main.
+- This request is for GitHub; hosted Sites deployment is not part of this update. Contact form backend remains unconnected.

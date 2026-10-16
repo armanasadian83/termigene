@@ -56,3 +56,9 @@ Nutrinext case study: /portfolio/nutrinext, implemented in src/NutrinextPages.js
 
 
 Business services: /service/marketing, /service/business, /service/crm, /service/training. Content: src/business-content.js. Team experience pages: /portfolio/experience/isiran-training, /portfolio/experience/parsana-consulting, /portfolio/experience/telecom-experience. These are attributed as team professional experience, distinct from studio development projects. Public copy must omit personal name, education and years of experience per owner instructions.
+
+## Bot development and catalogue
+
+- `/service/telegram` and `/service/bale`: bot development, scope, delivery and preselected contact requests.
+- Platform logos and attribution: `public/platforms/`.
+- Current six-page Persian sales catalogue: [Download PDF](docs/Termigene-Catalogue.pdf). Includes services, project examples, team experience and both clickable contact numbers on every page.
