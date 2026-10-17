@@ -333,3 +333,10 @@ Analysis report: `qa/redesign-analysis-fa.md`. Project continuity rules saved in
 - Normal push succeeded: origin/main advanced from 53d1bf6 to 443c493, including the previously blocked redesign commits. GitHub write access is now working.
 - Catalogue is tracked at docs/Termigene-Catalogue.pdf. Source and catalogue published to GitHub; hosted Sites version was not changed.
 - Final step: publish this outcome note, then verify local HEAD equals remote main and working tree is clean.
+
+## Sites publication retry (2026-10-17)
+- Owner explicitly requested publishing the current GitHub main version to the existing Site. Current release SHA is e128f074a6d0aed2e918f87b96bc90c048c1a7f2.
+- get_site confirmed active and owner-private (one owner viewer, no groups). Fresh short-lived credential passed only through hidden helper stdin; no credential written to disk.
+- Official site-workflow open failed again: Empty reply from server from git.chatgpt-team.site. No verified source-open result, so no archive save or deployment attempted; hosted version remains unchanged.
+- Resume with a working connection to Sites Git host, fresh credential, successful official open then package and deploy using the existing project ID. GitHub access is resolved and is unrelated to this transport failure.
+- Later retry at owner request on 2026-10-17: refreshed owner-private access and fresh credential, but official source open again failed with Empty reply from server. No save/deploy occurred; connection remains blocked before source synchronization.
