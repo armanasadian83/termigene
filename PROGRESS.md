@@ -362,3 +362,9 @@ Analysis report: `qa/redesign-analysis-fa.md`. Project continuity rules saved in
 - Desktop VS Code bridge connected to source/; opened saved src/content.js at line 13, dirty=false. User explicitly authorized normal main commit/push for this revision.
 - Publishing to existing GitHub main; preserving prior local Sites-helper progress-note commits. Sites hosting remains unchanged because source transport has not been resolved.
 - Confirmed normal GitHub push succeeded for 3dce0af4959e4d76ba1ea7f375c87395b5cf6f4a; local/remote main divergence 0/0 and source working tree clean immediately after push. This outcome note is committed separately; no application inputs changed after successful validation.
+
+## Wide services menu (2026-10-17)
+- Owner requested nearly full-page width for the services dropdown, with Git/GitHub and VS Code publication authorized.
+- Desktop panel anchored to sticky header, centered at width min(1280px, viewport minus 48px), with four category columns and a full-width final directory row. Two columns on tablet; mobile retains one column. Viewport height limit remains for small screens.
+- CSS-only change retains disclosure keyboard/dismissal behavior and bot-last ordering. Production build succeeded: main.9cef112c.js, main.67ef013d.css, 17 metadata routes. Existing 37 passing behavior tests were not rerun for CSS-only sizing. Visual browser review remains unverified.
+- VS Code bridge confirms saved home.css open at line 123. Normal main commit/push requested by owner; Sites deployment remains unchanged.

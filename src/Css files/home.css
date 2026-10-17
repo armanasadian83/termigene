@@ -118,3 +118,20 @@
 .services-menu-group+li.services-menu-group{border-top:1px solid #382745;margin-top:8px}
 .services-menu-group>ul{list-style:none;padding:0;margin:0}
 @media(max-width:600px){.service-groups{gap:32px}.service-group-title{font-size:19px;margin-bottom:16px}}
+
+/* Wide services menu anchored to the full header. */
+@media(min-width:1001px){
+ .services-dropdown{position:static}
+ .services-dropdown-list{top:calc(100% + 10px);right:auto;left:50%;transform:translateX(-50%);width:min(1280px,calc(100vw - 48px));max-width:none;box-sizing:border-box;padding:24px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-height:calc(100dvh - 120px);border-radius:22px}
+ .services-menu-heading{font-size:14px;min-height:54px;padding:6px 10px 14px;color:#d3adef}
+ .services-menu-group+li.services-menu-group{border-top:0;margin-top:0;border-inline-start:1px solid #382745;padding-inline-start:16px}
+ .services-dropdown-list a{padding:10px;font-size:14px;align-items:flex-start}
+ .services-dropdown-list a svg,.services-dropdown-list a .platform-logo{margin-top:3px}
+ .services-dropdown-more{grid-column:1/-1;margin-top:2px;padding-top:14px}
+ .services-dropdown-more a{width:fit-content;margin-inline:auto;align-items:center}
+}
+@media(min-width:601px) and (max-width:1000px){
+ .services-dropdown-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:18px}
+ .services-menu-group+li.services-menu-group{border-top:0;margin-top:0}
+ .services-dropdown-more{grid-column:1/-1}
+}
