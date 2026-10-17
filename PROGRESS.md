@@ -346,3 +346,18 @@ Analysis report: `qa/redesign-analysis-fa.md`. Project continuity rules saved in
 - Official build succeeded: main.a447731a.js, 17 metadata pages. Helper committed existing progress notes as dfcf15f1b45b61e43507b8564cee8b01a31537ea; app content unchanged from approved GitHub version.
 - First source push failed HTTP 403; a fresh credential and successful reopen were followed by a second push failure, Empty reply from server. No successful packaging result, saved version or deployment. Never report this as published.
 - Latest helper commit is local, not verified pushed to Sites or GitHub. Current notes also remain uncommitted. Resume by reconciling both remotes, then official open/package with fresh credentials. Existing owner-private audience confirmed and preserved.
+- Latest owner-requested retry (2026-10-17): official source open succeeded; package/push failed with curl 55 Send failure: Connection was reset and unexpected disconnect. No verified package result or deployment. Existing validated build retained; helper may have committed progress notes locally. Reconcile source HEAD/remotes before resume.
+- Hosted browser ERR_CONNECTION_RESET reported again (2026-10-17). Sites API remains active/version 1; error-only Worker log query for last 180 minutes returned no events (does not establish cause or reachability). Started local preview and verified HTTP 200; requested local browser opening. Hosted problem remains unresolved, no deploy or network setting changes.
+
+## Bot service ordering (2026-10-17)
+- Owner requested Telegram and Bale at the end of service cards and lists, and explicitly authorized publication to existing Git/GitHub and desktop VS Code.
+- Moved both entries after businessServices in the shared services array; order is Telegram then Bale. Cards, navigation, related services and contact options inherit this order. Catalogue already places bots last on its digital services page.
+- Verified array order. VS Code CLI successfully requested opening source/ and src/content.js; bridge returned no connected windows, so editor visibility/diagnostics could not be verified.
+- Production build validation underway before normal main push. Previously validated application tests: 35 passing. No test added for this data ordering edit.
+- Sites publication remains a separate unresolved transport issue; no hosted deployment claimed.
+
+## Categorized services and approved GitHub update (2026-10-17)
+- Added four shared categories: website/app/software development; SEO/content; business consulting/training; bot development. Cards use labelled category sections, dropdown uses grouped nested lists and contact selector uses optgroup. Telegram/Bale remain last, in that order.
+- Production build passed: main.9cef112c.js and main.e1868713.css; 17 route metadata documents generated. All 37 tests passed, including category completeness, bot ordering and grouped contact options. No browser visual review claimed.
+- Desktop VS Code bridge connected to source/; opened saved src/content.js at line 13, dirty=false. User explicitly authorized normal main commit/push for this revision.
+- Publishing to existing GitHub main; preserving prior local Sites-helper progress-note commits. Sites hosting remains unchanged because source transport has not been resolved.

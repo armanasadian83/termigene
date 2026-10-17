@@ -222,3 +222,17 @@ test('about page omits education and tenure while retaining professional experie
   expect(host.querySelector('main').textContent).toContain('پشتوانه اجرایی و آموزشی تیم');
   expect(host.querySelector('main').textContent).not.toMatch(/(?:۲۶|26)\\s*سال|دکترا|تحصیلات/);
 });
+
+test('service categories cover each service once and keep bots last in cards and form', () => {
+  render('/service');
+  expect(host.querySelectorAll('.service-group')).toHaveLength(4);
+  const cards = [...host.querySelectorAll('.service-card')].map(card => card.getAttribute('href'));
+  expect(new Set(cards).size).toBe(services.length);
+  expect(cards.slice(-2)).toEqual(['/service/telegram', '/service/bale']);
+});
+test('contact selector groups bot services last', () => {
+  render('/contact');
+  const groups = host.querySelectorAll('#service optgroup');
+  expect(groups).toHaveLength(4);
+  expect([...groups[3].querySelectorAll('option')].map(option => option.value)).toEqual(['telegram', 'bale']);
+});
