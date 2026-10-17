@@ -340,3 +340,9 @@ Analysis report: `qa/redesign-analysis-fa.md`. Project continuity rules saved in
 - Official site-workflow open failed again: Empty reply from server from git.chatgpt-team.site. No verified source-open result, so no archive save or deployment attempted; hosted version remains unchanged.
 - Resume with a working connection to Sites Git host, fresh credential, successful official open then package and deploy using the existing project ID. GitHub access is resolved and is unrelated to this transport failure.
 - Later retry at owner request on 2026-10-17: refreshed owner-private access and fresh credential, but official source open again failed with Empty reply from server. No save/deploy occurred; connection remains blocked before source synchronization.
+
+## Sites retry: source reads recovered, push still blocked (2026-10-17)
+- Official source open succeeded twice; connection is intermittent rather than wholly unavailable.
+- Official build succeeded: main.a447731a.js, 17 metadata pages. Helper committed existing progress notes as dfcf15f1b45b61e43507b8564cee8b01a31537ea; app content unchanged from approved GitHub version.
+- First source push failed HTTP 403; a fresh credential and successful reopen were followed by a second push failure, Empty reply from server. No successful packaging result, saved version or deployment. Never report this as published.
+- Latest helper commit is local, not verified pushed to Sites or GitHub. Current notes also remain uncommitted. Resume by reconciling both remotes, then official open/package with fresh credentials. Existing owner-private audience confirmed and preserved.
