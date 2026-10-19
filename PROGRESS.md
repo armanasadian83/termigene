@@ -368,3 +368,23 @@ Analysis report: `qa/redesign-analysis-fa.md`. Project continuity rules saved in
 - Desktop panel anchored to sticky header, centered at width min(1280px, viewport minus 48px), with four category columns and a full-width final directory row. Two columns on tablet; mobile retains one column. Viewport height limit remains for small screens.
 - CSS-only change retains disclosure keyboard/dismissal behavior and bot-last ordering. Production build succeeded: main.9cef112c.js, main.67ef013d.css, 17 metadata routes. Existing 37 passing behavior tests were not rerun for CSS-only sizing. Visual browser review remains unverified.
 - VS Code bridge confirms saved home.css open at line 123. Normal main commit/push requested by owner; Sites deployment remains unchanged.
+
+## New_Termigene separate Site (2026-10-17)
+- Owner explicitly requested a separate new Site to test whether a new project fixes publication. Created New_Termigene once: appgprj_6ad36cc5f0e88191b004daf07283c711, slug new-termigene, expected URL https://new-termigene.tangy-mars-7643.chatgpt.site. Old project remains intact.
+- Dedicated checkout new-termigene/ contains the validated latest static build copied to dist/ (index hash verified equal to source/build). Independent .openai/hosting.json stores the new project ID with static directory dist. Original source/ retains its old Site ID and GitHub repository.
+- Official source open succeeded. Source push/package failed Connection was reset. Retried with fresh credential plus process-only HTTP/1.1 and 10MB postBuffer; same connection-reset failure. No permanent Git/network configuration changes and no credentials persisted.
+- No verified package, saved version or deployment. New card exists but publication is incomplete. Resume the same new project ID (do not create duplicates), reconcile its Git state through official helper, then package/save/deploy privately after verified source push. Full React source remains in source/ and GitHub; new checkout is a static release snapshot, so refresh dist from validated build for future updates.
+
+## New_Termigene published successfully (2026-10-19)
+- Official source synchronization and packaging completed successfully. Exact pushed static source SHA: e67e65bc5480333c72a1cbdbfba1a4e36d6d60e2. Archive: new-termigene.tar.gz.
+- Portable Windows packaging required process-only PATH prefix C:/Program Files/Git/bin and TAR_OPTIONS=--force-local. This resolves missing Bash and GNU tar misinterpreting the C: drive as a remote host. No permanent tool/config changes.
+- save_version_and_deploy_private returned succeeded for project appgprj_6ad36cc5f0e88191b004daf07283c711, version appgprj_6ad36cc5f0e88191b004daf07283c711~appgver_4618b7dc28fc8191884bfacd261ced22, deployment appgdep_6ad5de1dae0c819193c6c837d5b0b7d5.
+- Production URL: https://new-termigene.tangy-mars-7643.chatgpt.site. Owner-private audience retained. Native success confirms publication; browser reachability and visual QA are not independently verified. Opening requested in Codex.
+- Original Termigene Site is unchanged. Full React development checkout remains source/; new-termigene/ is the static release snapshot. For future deployment refresh from validated source/build, then official source workflow with the new ID and above temporary Windows env settings. Credential discarded after completion.
+
+## Hero services button label (2026-10-19)
+- Applied browser annotation to the owning homepage Link in src/app.jsx: خدمات ما را ببین -> خدمات ما. Same label at all breakpoints; destination and layout unchanged.
+- Production build passed (main.5455f0bc.js; CSS main.67ef013d.css), 17 route metadata documents generated. No new test for a one-label change.
+- Refreshed new-termigene/dist from validated source/build. Official source/package succeeded for static source cd695d92b7f6bd326ef163fae4e15d453d10b9bb.
+- Private publish succeeded: deployment appgdep_6ad5e078dd1c81919348bb8acf92e8ba, version appgprj_6ad36cc5f0e88191b004daf07283c711~appgver_7a7cd1d9ab308191a19b32635af3c8f0, URL https://new-termigene.tangy-mars-7643.chatgpt.site. Native success confirms deployment; browser visual QA unverified.
+- Syncing React source and progress notes to GitHub under the owner's standing authorization. VS Code bridge had no connected windows during this revision.
