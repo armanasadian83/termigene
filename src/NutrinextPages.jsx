@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import { MoreLink } from './InfoPages';
 
 function Screenshot() {
-  return <a className="project-screenshot" href="https://nutrinext.ir/" target="_blank" rel="noopener noreferrer" aria-label="مشاهده سایت نوترینکست در تب جدید"><img src="/projects/nutrinext/homepage.png" alt="صفحه اصلی سایت نوترینکست؛ از کالری تا کارایی، تغذیه هوشمند با مدیریت هوشمند" width="1892" height="1019" loading="lazy"/><span>مشاهده سایت نوترینکست <span aria-hidden="true">↗</span></span></a>;
+  return <a className="project-screenshot" href="https://nutrinext.ir/" target="_blank" rel="noopener noreferrer" aria-label="مشاهده سایت نوترینکست در تب جدید"><img src="/projects/nutrinext/homepage.webp" alt="صفحه اصلی سایت نوترینکست؛ از کالری تا کارایی، تغذیه هوشمند با مدیریت هوشمند" width="1892" height="1019" loading="lazy" decoding="async"/><span>مشاهده سایت نوترینکست <span aria-hidden="true">↗</span></span></a>;
 }
 const Tags = () => <div className="project-pill-row"><span>طراحی سایت اختصاصی</span><span>تغذیه سازمانی</span><span>ادامه توسعه پلتفرم‌ها</span></div>;
 
 export function NutrinextCard() {
   return <article className="portfolio-project-card nutrinext-card"><div className="project-card-art"><NutrinextBrand/><Screenshot/></div><div className="project-card-copy"><span className="eyebrow">از ایده تغذیه هوشمند تا حضور دیجیتال</span><h2><Link to="/portfolio/nutrinext">گروه نوترینکست</Link></h2><p>طراحی و برنامه‌نویسی اختصاصی سایت گروهی با ایده بهینه‌سازی تغذیه کارکنان شرکت‌ها و کارخانه‌ها؛ همکاری‌ای که با توسعه پلتفرم‌های دیگر ادامه دارد.</p><Tags/><MoreLink to="/portfolio/nutrinext"/></div></article>;
 }
-function NutrinextBrand() { return <img className="nutrinext-wordmark" src="/projects/nutrinext/wordmark.png" alt="نوترینکست — Nutrinext" width="899" height="173" loading="lazy"/>; }
+function NutrinextBrand() { return <img className="nutrinext-wordmark" src="/projects/nutrinext/wordmark.png" alt="نوترینکست — Nutrinext" width="899" height="173" loading="lazy" decoding="async"/>; }
 export function NutrinextTeaser() {
   return <section className="shell portfolio-teaser" aria-labelledby="nutrinext-teaser-title"><div className="portfolio-teaser-copy"><span className="eyebrow">✦ از ایده تا یک پروژه واقعی</span><h2 id="nutrinext-teaser-title">نوترینکست؛ از کالری،<br/><span className="purple-text">تا کارایی.</span></h2><p>برای گروه نوترینکست، سایتی اختصاصی ساختیم تا ایده تغذیه هوشمند کارکنان شرکت‌ها و کارخانه‌ها را معرفی کند. همکاری ما با توسعه پلتفرم‌های دیگر این گروه ادامه دارد.</p><Link className="button" to="/portfolio/nutrinext">بیشتر بدانید <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></Link></div><div className="portfolio-teaser-visual has-screenshot"><NutrinextBrand/><Screenshot/><Tags/><span className="project-domain" dir="ltr">nutrinext.ir</span></div></section>;
 }export function NutrinextCaseStudy() {

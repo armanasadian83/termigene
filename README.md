@@ -48,7 +48,7 @@ Read `PROGRESS.md` and `AGENTS.md` before further work. The owner explicitly app
 
 The case study is at `/portfolio/ogenetech`, with an index at `/portfolio` and a short teaser on the homepage. Content lives in `src/portfolio.js`, page components in `src/PortfolioPages.jsx`, route SEO metadata in `src/portfolio-metadata.json`.
 
-`yarn build` runs the `postbuild` metadata generator automatically. If calling CRA directly with `node node_modules/react-scripts/scripts/build.js`, run `node scripts/build-page-metadata.cjs` immediately afterwards. This writes title/description/share tags and project JSON-LD into the HTML of both portfolio routes; React still renders the body in the browser.
+`yarn build` runs the `postbuild` metadata generator automatically. If calling CRA directly with `node node_modules/react-scripts/scripts/build.js`, run `node scripts/build-page-metadata.cjs` immediately afterwards. This now renders the complete HTML and metadata for every public route; React hydrates that same content in the browser. See docs/SEO.md for current details.
 
 The outer `preview.cjs` serves directory index files for those routes and SPA fallback for other URLs. Review evidence and limitations: `../qa/ogenetech-analysis-fa.md`. No private admin access or live purchase was performed. Canonical URLs should be finalized only when the deployment hostname is confirmed.
 
@@ -62,3 +62,7 @@ Business services: /service/marketing, /service/business, /service/crm, /service
 - `/service/telegram` and `/service/bale`: bot development, scope, delivery and preselected contact requests.
 - Platform logos and attribution: `public/platforms/`.
 - Current six-page Persian sales catalogue: [Download PDF](docs/Termigene-Catalogue.pdf). Includes services, project examples, team experience and both clickable contact numbers on every page.
+
+## Public SEO build
+
+See [SEO maintenance](docs/SEO.md). The production build now writes complete page HTML, not only metadata. It covers all 24 public routes, generates sitemap.xml and robots.txt, and hydrates into the same React application. Run `yarn verify:seo` after building. Active public release: https://new-termigene.tangy-mars-7643.chatgpt.site/ (Termigene).

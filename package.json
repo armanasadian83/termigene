@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "postbuild": "node scripts/build-page-metadata.cjs",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "verify:seo": "node scripts/verify-seo.cjs"
   },
   "jest": {
     "moduleNameMapper": {

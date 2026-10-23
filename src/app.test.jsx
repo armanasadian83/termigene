@@ -147,7 +147,7 @@ test('leaving the case study clears project-only metadata and keeps service titl
   render('/portfolio/ogenetech');
   act(() => host.querySelector('a[href="/service/web"]').click());
   expect(document.getElementById('portfolio-project-schema')).toBeNull();
-  expect(document.title).toBe('طراحی و توسعه وب‌سایت | ترمیژن');
+  expect(document.title).toBe('طراحی سایت اختصاصی و وردپرسی | ترمیژن');
   expect(document.querySelector('meta[property="og:type"]').content).toBe('website');
 });
 
@@ -189,7 +189,7 @@ test('Nutrinext portfolio card leads to a distinct case study and live screensho
   expect(screenshot.href).toBe('https://nutrinext.ir/');
   expect(screenshot.target).toBe('_blank');
   expect(screenshot.rel).toContain('noopener');
-  expect(screenshot.querySelector('img').getAttribute('src')).toBe('/projects/nutrinext/homepage.png');
+  expect(screenshot.querySelector('img').getAttribute('src')).toBe('/projects/nutrinext/homepage.webp');
   for (const link of host.querySelectorAll('.case-contents a')) expect(host.querySelector(link.getAttribute('href'))).not.toBeNull();
   const schema = JSON.parse(document.getElementById('portfolio-project-schema').textContent);
   expect(schema.about.url).toBe('https://nutrinext.ir/');
@@ -235,4 +235,27 @@ test('contact selector groups bot services last', () => {
   const groups = host.querySelectorAll('#service optgroup');
   expect(groups).toHaveLength(4);
   expect([...groups[3].querySelectorAll('option')].map(option => option.value)).toEqual(['telegram', 'bale']);
+});
+
+test('SEO metadata remains unique and canonical ignores contact query parameters', () => {
+ render('/contact?service=web');
+ expect(document.querySelectorAll('link[rel="canonical"]')).toHaveLength(1);
+ expect(document.querySelector('link[rel="canonical"]').href).toBe('https://new-termigene.tangy-mars-7643.chatgpt.site/contact/');
+ expect(document.querySelector('meta[property="og:image"]').content).toContain('/brand/share-card.png');
+ expect(host.querySelector('#service').value).toBe('web');
+});
+test('unknown routes are noindex and have no canonical', () => {
+ render('/missing-page');
+ expect(document.querySelector('meta[name="robots"]').content).toBe('noindex, follow');
+ expect(document.querySelector('link[rel="canonical"]')).toBeNull();
+});
+test('service FAQ and breadcrumb schema describe visible content', () => {
+ render('/service/telegram');
+ expect(host.querySelector('.page-breadcrumbs')).not.toBeNull();
+ expect(host.querySelectorAll('.service-questions details')).toHaveLength(3);
+ const graph = JSON.parse(document.getElementById('site-seo-schema').textContent)['@graph'];
+ expect(graph.find(item => item['@type'] === 'Service').name).toContain('تلگرام');
+ const faq = graph.find(item => item['@type'] === 'FAQPage');
+ for (const item of faq.mainEntity) expect(host.textContent).toContain(item.acceptedAnswer.text);
+ expect(graph.find(item => item['@type'] === 'BreadcrumbList').itemListElement).toHaveLength(3);
 });

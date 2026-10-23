@@ -8,10 +8,10 @@ function Arrow() {
 }
 
 function ProjectScreenshot() {
-  return <a className="project-screenshot" href={project.url} target="_blank" rel="noopener noreferrer" aria-label="مشاهده سایت آموزشگاه اوژن در تب جدید"><img src="/projects/ogentech/ogen-homepage.png" alt="صفحه اصلی سایت آموزشگاه اوژن؛ معرفی آموزشگاه و دوره‌های نانوزیست‌فناوری" width="1904" height="968" loading="lazy"/><span>مشاهده سایت اوژن <span aria-hidden="true">↗</span></span></a>;
+  return <a className="project-screenshot" href={project.url} target="_blank" rel="noopener noreferrer" aria-label="مشاهده سایت آموزشگاه اوژن در تب جدید"><img src="/projects/ogentech/ogen-homepage.webp" alt="صفحه اصلی سایت آموزشگاه اوژن؛ معرفی آموزشگاه و دوره‌های نانوزیست‌فناوری" width="1904" height="968" loading="lazy" decoding="async"/><span>مشاهده سایت اوژن <span aria-hidden="true">↗</span></span></a>;
 }
 function ProjectBrand({ compact = false }) {
-  return <div className={`ogene-project-brand${compact ? ' compact' : ''}`}><img src="/projects/ogentech/ogen-logo.png" alt="لوگوی آموزشگاه نانوزیست‌فناوری اوژن" width="92" height="100" loading="lazy"/><div><span dir="ltr">OGENETECH</span><small>آموزش، پژوهش و فناوری</small></div></div>;
+  return <div className={`ogene-project-brand${compact ? ' compact' : ''}`}><img src="/projects/ogentech/ogen-logo.png" alt="لوگوی آموزشگاه نانوزیست‌فناوری اوژن" width="92" height="100" loading="lazy" decoding="async"/><div><span dir="ltr">OGENETECH</span><small>آموزش، پژوهش و فناوری</small></div></div>;
 }
 
 export function PortfolioTeaser() {
