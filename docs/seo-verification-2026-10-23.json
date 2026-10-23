@@ -1,0 +1,96 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "final_url": "https://new-termigene.tangy-mars-7643.chatgpt.site/",
+    "content_type": "text/html",
+    "x_robots_tag": null,
+    "has_main": true,
+    "has_canonical": true,
+    "has_schema": true,
+    "noindex": false,
+    "h1_count": 1,
+    "current_bundle": true
+  },
+  {
+    "path": "/service/web/",
+    "status": 200,
+    "final_url": "https://new-termigene.tangy-mars-7643.chatgpt.site/service/web/",
+    "content_type": "text/html",
+    "x_robots_tag": null,
+    "has_main": true,
+    "has_canonical": true,
+    "has_schema": true,
+    "noindex": false,
+    "h1_count": 1,
+    "current_bundle": true
+  },
+  {
+    "path": "/service/telegram/",
+    "status": 200,
+    "final_url": "https://new-termigene.tangy-mars-7643.chatgpt.site/service/telegram/",
+    "content_type": "text/html",
+    "x_robots_tag": null,
+    "has_main": true,
+    "has_canonical": true,
+    "has_schema": true,
+    "noindex": false,
+    "h1_count": 1,
+    "current_bundle": true
+  },
+  {
+    "path": "/service/bale/",
+    "status": 200,
+    "final_url": "https://new-termigene.tangy-mars-7643.chatgpt.site/service/bale/",
+    "content_type": "text/html",
+    "x_robots_tag": null,
+    "has_main": true,
+    "has_canonical": true,
+    "has_schema": true,
+    "noindex": false,
+    "h1_count": 1,
+    "current_bundle": true
+  },
+  {
+    "path": "/portfolio/ogenetech/",
+    "status": 200,
+    "final_url": "https://new-termigene.tangy-mars-7643.chatgpt.site/portfolio/ogenetech/",
+    "content_type": "text/html",
+    "x_robots_tag": null,
+    "has_main": true,
+    "has_canonical": true,
+    "has_schema": true,
+    "noindex": false,
+    "h1_count": 1,
+    "current_bundle": true
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "final_url": "https://new-termigene.tangy-mars-7643.chatgpt.site/sitemap.xml",
+    "content_type": "text/xml",
+    "x_robots_tag": null,
+    "urls": 24
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "final_url": "https://new-termigene.tangy-mars-7643.chatgpt.site/robots.txt",
+    "content_type": "text/plain",
+    "x_robots_tag": null,
+    "sitemap_declared": true
+  },
+  {
+    "path": "/seo-missing-page-check",
+    "status": 404,
+    "final_url": "https://new-termigene.tangy-mars-7643.chatgpt.site/seo-missing-page-check",
+    "content_type": "text/html",
+    "x_robots_tag": null,
+    "has_main": true,
+    "has_canonical": false,
+    "has_schema": false,
+    "noindex": true,
+    "h1_count": 1,
+    "current_bundle": true
+  }
+]

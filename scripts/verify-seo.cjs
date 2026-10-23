@@ -6,6 +6,7 @@ require('./load-source.cjs');
 const { allRoutes, getPageSeo, canonicalUrl } = require('../src/page-seo.js');
 const build = path.resolve(__dirname, '../build');
 const titles = new Set();
+const descriptions = new Set();
 let checkedLinks = 0;
 for (const route of allRoutes) {
  const html = fs.readFileSync(path.join(build, route.slice(1), 'index.html'), 'utf8');
@@ -18,6 +19,8 @@ for (const route of allRoutes) {
  assert.equal(document.title, getPageSeo(route).title, route);
  assert.ok(!titles.has(document.title), route + ': unique title'); titles.add(document.title);
  assert.equal(document.querySelectorAll('meta[name="description"]').length, 1, route);
+ const description = document.querySelector('meta[name="description"]').content;
+ assert.ok(!descriptions.has(description), route + ': unique description'); descriptions.add(description);
  assert.ok(!document.querySelector('meta[name="robots"]').content.includes('noindex'), route);
  for (const script of document.querySelectorAll('script[type="application/ld+json"]')) JSON.parse(script.textContent);
  for (const link of document.querySelectorAll('a[href^="/"]')) {
