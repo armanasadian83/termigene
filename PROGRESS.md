@@ -388,3 +388,10 @@ Analysis report: `qa/redesign-analysis-fa.md`. Project continuity rules saved in
 - Refreshed new-termigene/dist from validated source/build. Official source/package succeeded for static source cd695d92b7f6bd326ef163fae4e15d453d10b9bb.
 - Private publish succeeded: deployment appgdep_6ad5e078dd1c81919348bb8acf92e8ba, version appgprj_6ad36cc5f0e88191b004daf07283c711~appgver_7a7cd1d9ab308191a19b32635af3c8f0, URL https://new-termigene.tangy-mars-7643.chatgpt.site. Native success confirms deployment; browser visual QA unverified.
 - Syncing React source and progress notes to GitHub under the owner's standing authorization. VS Code bridge had no connected windows during this revision.
+
+## Header project button label (2026-10-23)
+- Changed only the shared header CTA from شروع یک پروژه to شروع پروژه at every breakpoint; contact destination and styling preserved.
+- Build passed: main.a40c45f7.js, CSS main.67ef013d.css, 17 metadata routes. No new tests for this text-only edit.
+- Refreshed static release and official workflow pushed source 652b6b30f928a668d445b69680995a83cd7b4d51. Sites 1.1.1 helpers used with process-only Git Bash PATH and TAR_OPTIONS=--force-local.
+- Private deployment succeeded: appgdep_6adb238a652481918c3b981cb0cee063; version appgprj_6ad36cc5f0e88191b004daf07283c711~appgver_bc418a30f0fc8191829294314c0b7af1. Live URL https://new-termigene.tangy-mars-7643.chatgpt.site. Native success confirms publication; no browser visual QA claimed.
+- Syncing same React source and report to existing GitHub main under standing authorization. Original Site remains unchanged.
